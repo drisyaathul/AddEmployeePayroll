@@ -14,7 +14,7 @@ class EmployeeParollData{
     set name(name){
         let nameRegex=RegExp('^[A-Z]{1}{a-zA-Z}{2,}$')
         if(nameRegex.test(name)){
-            this._this=name;
+            this._name=name;
         }
         else{
             throw 'name is incorrect! Please check your name';
@@ -89,17 +89,4 @@ class EmployeeParollData{
     return "id=" +this.id+"name= "+this.name+", gender="+this.gender + ", profilePic=" +this.profilepic + 
     ", department="+ this.department + ", salary="+this.salary+ ", startDate=" +empDate+", note="+this.note;
 }
-}
-
-const salary = document.querySelector('#salary');
-const output = document.querySelector('.salary-output');
-output.textContent =salary.value;
-salary.addEventListener('input',function(){
-    output.textContent=salary.value
-});
-
-imgclicked=()=>{
-    console.log("image clicked!!!!")
-
-    console.log("image clicked!!!!")
 }
