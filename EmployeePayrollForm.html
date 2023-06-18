@@ -5,9 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Employee Payroll Form</title>
     <link rel="stylesheet" href="./EmployeePayrollForm.css">
-    <script defer src="./EmployeePayrollForm.js"></script>
-    <script defer src="./EmployeePayrollData.js"></script>
     <script defer src="./EmployeeQuery.js"></script>
+    <script defer src="./EmployeePayroll.js"></script>
 </head>
 <body>
     <header class="header-content header">
@@ -21,7 +20,7 @@
     </header>
     
     <div id="formId" class="form-content">
-        <form class="form" action="#" onreset="resetForm()" onsubmit="save(event);return false">
+        <form class="form" action="#" onsubmit="save();return false">
             <div class="form-head">
                 Employee Payroll Form 
             </div>
@@ -161,6 +160,5 @@
         </div>
     </form>
 </div>
-<script type="text/javascript" src="./EmployeePayroll.js"></script>
 </body>
 </html>
