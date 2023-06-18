@@ -20,7 +20,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
         output.textContent=salary.value;
     });
 });
-//UC3:
+
+//UC3:On Save Create Emp Payroll Object
 const save = () => {
   try{
       let EmployeePayrollData=createEmployeePayroll();
@@ -29,7 +30,6 @@ const save = () => {
       return;
       }
   }
-  
   const createEmployeePayroll= () => {
       let employeePayrollData= new employeePayrollData();
       try{
@@ -75,6 +75,29 @@ const save = () => {
       let value = document.getElementById(id).value;
       return value;
   }
+
+  //UC4: Saving Employee Payroll To Local Storage
+  const save1 = () => {
+    try{
+        let EmployeePayrollData=createEmployeePayroll();
+         createAndUpdateStorage(EmployeePayrollData);
+    }catch (e) {
+        return;
+        }
+    }
+
+    function createAndUpdateStorage (employeePayrollData) {
+
+      let employeePayrollList = JSON.parse(localStorage.getItem("Employee Payroll List"));
+      if(employeePayrollList != undefined) {
+        employeePayrollList.push(employeePayrollData);
+      }else {
+        employeePayrollList = [employeePayrollData]
+      }
+      alert(employeePayrollList.toString());
+      localStorage.setItem("Employee Payroll List", JSON.stringify(employeePayrollList))
+    }
+
 
 
 

@@ -20,7 +20,7 @@
     </header>
     
     <div id="formId" class="form-content">
-        <form class="form" action="#" onsubmit="save();return false">
+        <form class="form" action="#" onreset="resetForm()" onsubmit="save()">
             <div class="form-head">
                 Employee Payroll Form 
             </div>
@@ -34,8 +34,7 @@
                 <label class="label text" for="profile">Profile Image</label>
                 <div class="profile-radio-content">
                     <label>
-                        <input type="radio" id="profile1" name="profile"
-                        value="../assets/profile-images/img1.png" required>
+                        <input type="radio" id="profile1" name="profile" value="../assets/profile-images/img1.png" required>
                         <img class="profile" id="image1" src="./assets/profile-images/img1.png" width="50%" height="40px" >
                     </label>
                     <label>
@@ -149,7 +148,7 @@
        
         <div class="row-content">
             <label class="label text" for="notes">Notes</label>
-            <textarea id="notes" class="input" name="Notes" placeholder="" style="height: 100px"></textarea>
+            <textarea id="notes" class="input" name="Notes" style="height: 100px"></textarea>
         </div>
         <div class="buttonParent">
             <a href="EmployeePayrollForm.html" class="resetButton button cancelButton">Cancel</a>
